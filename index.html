@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2048</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">2048</h1>
+      <div class="header-right">
+        <div class="scores">
+          <div class="score-box" aria-live="polite">
+            <div class="label">Score</div>
+            <div id="score-value" class="value">0</div>
+          </div>
+          <div class="score-box" aria-live="polite">
+            <div class="label">Best</div>
+            <div id="best-value" class="value">0</div>
+          </div>
+        </div>
+        <button id="new-game" class="btn">New Game</button>
+      </div>
+    </header>
+
+    <main class="game">
+      <div class="board" id="board">
+        <div class="grid" aria-hidden="true">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="tiles" id="tile-container" aria-live="polite"></div>
+        <div class="overlay hidden" id="overlay" role="dialog" aria-modal="true">
+          <div class="overlay-content">
+            <p id="overlay-message"></p>
+            <button id="try-again" class="btn">Try Again</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Use arrow keys or swipe to move tiles.</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
